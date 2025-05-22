@@ -1,4 +1,3 @@
-
 html {
     box-sizing: border-box;
     font-size: 62.5%; 
@@ -11,16 +10,18 @@ html, body {
     height: 100%;
 }
 body {
-    background: #f6f6f6; 
+    background: #e9ecef; /* softer light gray-blue */
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     line-height: 1.4;
+    color: #333; /* dark gray text */
 }
 h1, h2, h3 {
     font-family: 'Caveat', cursive;
     font-weight: 400;
     margin: 0;
+    color: #264653; /* dark teal */
 }
 h1 {
     font-size: 7rem;
@@ -33,24 +34,23 @@ h3 {
     font-size: 2.4rem;
 }
 
-
 a {
-    color: #3c8453;
+    color: #2a9d8f; /* teal-ish green */
 }
 a:hover {
-    color: #bcaa96;
+    color: #e76f51; /* warm coral */
     text-decoration: none;
 }
 footer a {
-    color: #bcaa96;
+    color: #e76f51; /* warm coral */
 }
 footer a:hover {
-    color: #3c8453;
+    color: #2a9d8f; /* teal-ish green */
 }
 .btn{
-    background:#3c8453;
-    color:#f6f6f6;
-    text-decoration:none;
+    background: #2a9d8f; /* teal-ish green */
+    color: #ffffff;
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 1.2rem;
     display: inline-block;
@@ -62,7 +62,7 @@ footer a:hover {
 .content-wrapper{
     margin: 0 auto;
     padding: 30px;
-    max-width: 900px;;
+    max-width: 900px;
 }
 
 .home{
@@ -75,7 +75,7 @@ footer a:hover {
     flex: 1 0 auto;
 }
 .content-bg{
-    background: rgb(255 255 255 /0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
 }
 @media screen and (max-width:580px) {
@@ -93,19 +93,20 @@ footer a:hover {
     display: block;
     content:"";
     height: 375px;
-    
+    filter: brightness(0.85); /* slight darkening for contrast */
 }
 .resume-section{
     margin-bottom: 50px;
 }
 .resume-section h2{
-    border-bottom: 2px dashed lightgray;
+    border-bottom: 2px dashed #a8dadc; /* soft teal dashed border */
 }
 .download-link{
     position: fixed;
     top: 5px;
     left: 5px;
     font-size: 1.5rem;
+    color: #264653; /* dark teal */
 }
 @media screen and (max-width:1920px){
     .download-link{
@@ -156,7 +157,6 @@ footer a:hover {
     }
 }
 
-
 .work-item{
     margin: 30px 0;
 }
@@ -182,8 +182,8 @@ footer a:hover {
 }
 
 footer{
-    background: #222;
-    color: #d3d4d6;
+    background: #1b1b1b; /* almost black */
+    color: #cbd5e1; /* light cool gray */
 }
 .socials{
     list-style-type: none;
@@ -210,5 +210,29 @@ footer{
     footer{
         text-align: center;
         padding: 10px;
+    }
+}
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+    color: #264653; /* dark teal */
+    background-color: #2a9d8f; /* teal background */
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+}
+.download-link:hover {
+    background-color: #e76f51; /* coral on hover */
+    color: #fff;
+    text-decoration: none;
+}
+@media screen and (max-width:1920px){
+    .download-link {
+        position: absolute;
     }
 }
